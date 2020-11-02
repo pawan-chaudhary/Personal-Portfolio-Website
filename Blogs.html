@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio Website</title><!-- This is the title of website -->
+	<meta charset="utf-8"><!-- Unicode transformation format which contains universal character. it is the freatur of html-5 -->
+	<meta name="description" content="This web page contains blogs which you can learn to get information on different topics.">
+  	<meta name="keywords" content="HTML,CSS,JavaScript">
+  	<meta name="author" content="Pawan Chaudhary">
+	<link rel="icon" href="icon.png"><!-- Providing icon to the website in title -->
+	<link rel="stylesheet" href="index1.css"><!-- Using external CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><!-- Using a link provided by website to import icon by using this link. -->
+	<style>
+		/*Styling body of a webpage*/
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: verdana;
+			background-color:#c2c2d6;
+		}
+		/*Styling class blog*/
+		.blog{
+			padding: 10px;
+			margin-left: 280px;
+			width: 800px; 
+		}
+		/*Styling p tag of naming class*/
+		.naming p{
+			margin-left: 90px;
+			margin-top: -50px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Class for Navigation bar -->
+	<div class="Navigation_Bar">
+		<nav>
+			<img src="logo.png" width="180" height="100" alt="No Preview">
+			<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a class="current" href="Blogs.html">Blogs</a></li>
+			<li><a href="About_me.html">About Me</a></li>
+			<li><a href="Research.html">Research</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<img src="tech.jpg" width="1440" height="250" alt="No Preview"><!-- Importing image  -->
+	<p id="date1" style="color: #cc0000; padding: 10px;"></p><!-- Styling id which is used in Javascript by inline css -->
+	<div class="blog" style="text-align: justify;"> <!-- Styling class by inline css -->
+		<div class="naming">
+		<h1>How technology has affected your daily lives?</h1>
+		<img src="me.png" width="80" height="80" alt="No Preview">
+		<p>Pawan Chaudhary | May 01 2019| <a href="javascript:printPage()"><i class="fas fa-print"></i> Print</a></p>
+		</div>
+		<p><br><br>From many years to till now technology has become more and more a part of our daily lives. Technology saves time, opens a gate to new experiences, and makes traveling to halfway around the world easy. People on the world are directly dependent to the technology now and will be on more demand and useful in future. Notice how our daily life are surrounded by gadgets, computers, and other technology appliances. Nowadys almost 90% of our work can be done by technology and its appliances. for example we use smart phone that is a kind of technology, we use tv, computer, motor cycle, car, etc. all are technology. Technology becomes useful and useless according to its use and demand. it has its own positive and negative aspects that impact on our lives.</p><h2>Technology changed education:</h2><p>Technology has changed the way we learn and learn. In the past, we were not able to get the flexibility of data, information and knowledge. The school was very far from home. We learned that it was not interesting in a way. But today, due to technology, there are online schools. Anyone can do online degrees using the internet and computers. There are different types of online courses for everyone with different content. In this way, technology has changed the education. This is a positive change.</p><h2>Changes in life styles:</h2><p>Technology has a positive and negative impact on our daily lives. Today, we live more of the appearance of a fulfilled life. The madness and misconduct of selfies in the risky areas are well known. We do online shopping and there are different varieties and price comparison tools. Technologies have an internet of things that anyone can use in daily lives. We are more busy than productive. 30 years ago people have time for friends and family. They lived and enjoyed life in real time. At the same time humans are emotional, caring and humane. Today we do the same thing on social media but without emotion. This is a technological effect. And we are responsible for this change. It is good or bad; it depends on the users and how they use it.</p><h2>Technology has changed the ways of how humans communicate:</h2><p>Today, we have mobile, internet, computer and social media content, video conferencing tools, and mobile applications to communicate with anyone from anywhere in the world. It was impossible in the past. The advantage of communication exchange is the fast, easy and fastest communication method. In the past, a letter took 10 days to reach its destination, for example money, greetings cards, personal letters and thousands of other sources of communication are not fast enough. But, the technology has changed so now you can send an email. You can transfer money from your mobile phone. This is technology and it is non-stop.</p><h2>Technology affects young people:</h2><p>Youth is totally dependent on technology for almost everything. Little knowledge or practical knowledge is not generated by classroom teachers, but by the internet. Technology makes children older. They learn and watch things that could not be viewed 25 years ago. In this way, technology negatively affects our youth. Our youth is ready to fight on social media but cannot run the road and cannot even take buckets of water at home. But on the internet it’s no less than an army. Is it positive or negative? Patriotism of youth is well known on the internet, and at the same time some of them do not want to save water, clean atmosphere and safety of the girl. There are so many positive technologies. And it is technology, which has increased the career opportunities for youth. Each type of skill can start an online business. They can become programmers, designers and service providers remotely. Technology has a positive and negative impact, but it is really important for our teachers, teaching in colleges and IT schools to teach their productive and environmentally-friendly technology applications.</p>
+	</div>
+	<!-- Javascript for importing date in webpage -->
+	<script>
+		var a=new Date();
+		document.getElementById("date1").innerHTML="Today: "+a.toDateString();
+	</script>
+	<!-- Javascript to allow the browser to print webpage -->
+	<script>
+		function printPage() {
+  		window.print();
+		}
+	</script>
+</body>
+</html>

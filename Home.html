@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio Website</title><!-- This is the title of website -->
+	<meta charset="utf-8"><!-- Unicode transformation format which contains universal character. it is the feature of html-5 -->
+	<meta name="description" content="This web page contains image slider and typing text system which attracts the user. ">
+  	<meta name="keywords" content="HTML,CSS,JavaScript">
+  	<meta name="author" content="Pawan Chaudhary">
+	<link rel="icon" href="icon.png" type="image/png"> <!-- Providing icon to the website in title -->
+	<link rel="stylesheet" href="index1.css"><!-- Using external CSS -->
+	<style>
+		/*Styling body of a webpage*/
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: Verdana;
+			background-color: #000;
+		}
+		/*Styling typing effect*/	
+		#intro{
+			margin-top: 50px;
+			text-align: left;
+			font-size: 40px;
+		}
+		/*Styling slide button*/
+		.prev, .next {
+  		position: absolute;
+  		top: 40%;
+  		width: auto;
+  		margin-top: -30px;
+  		padding: 16px;
+  		font-weight: bold;
+  		font-size: 50px;
+		}
+		/*Styling right slide button*/
+		.next {
+  		position: absolute;
+  		right: 0;
+		}
+		/*Providing background to slide buttons on hover*/
+		.prev:hover, .next:hover {
+			background-color: #cccccc;
+		}
+		/*Styling line below slideshow that contains dot buttons*/ 
+		.dot-line {
+  			text-align: center;
+  			padding: 25px;
+ 			background: #f2f2f2;
+		}
+		/*Styling dot button*/
+		.dot {
+  			cursor: pointer;
+  			height: 15px;
+  			width: 15px;
+  			margin: 0 2px;
+  			background-color: #999999;
+  			border-radius: 50%;
+  			display: inline-block;
+  			transition: background-color 0.6s ease;
+		}
+		/*Providing background to dot button on hover*/
+		.dot:hover {
+  			background-color: #000000;
+		}
+	</style>	
+</head>
+<body>
+	<!-- Class for Navigation bar -->
+	<div class="Navigation_Bar">
+		<nav>
+		<img src="logo.png" width="180" height="100" alt="No Preview">
+		<ul>
+			<li><a class="current" href="Home.html">Home</a></li>
+			<li><a href="Blogs.html">Blogs</a></li>
+			<li><a href="About_me.html">About Me</a></li>
+			<li><a href="Research.html">Research</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- Importing images  -->	
+		<img  class="slideShow" src="1.jpg"  height="500" alt="No Preview" >
+		<img  class="slideShow" src="2.jpg"  height="500" alt="No Preview">
+		<img  class="slideShow" src="3.jpg"  height="500" alt="No Preview">
+		<img  class="slideShow" src="4.jpg"  height="500" alt="No Preview">
+	<!-- Creating Slide side buttons -->
+		<button class="prev" onclick="slidebtn(-1)">&#10094;</button>
+		<button class="next" onclick="slidebtn(+1)">&#10095;</button>
+	<!-- Class for the dot line on home page -->
+		<div class="dot-line">
+			<span class="dot" onclick="dotSlide(1)"></span> 
+  			<span class="dot" onclick="dotSlide(2)"></span> 
+  			<span class="dot" onclick="dotSlide(3)"></span>
+  			<span class="dot" onclick="dotSlide(4)"></span> 
+		</div>
+	<!-- Providing inline css style to typing text --> 
+ 	<p id="intro" style="color: #fff; padding: 10px;"></p>
+ 	<!-- Javascript for changing slide when side buttons are pressed -->
+	<script>
+		var index = 1;
+		showSlides(index);
+
+		function slidebtn(n) {
+  			showSlides(index += n);
+		}
+		function dotSlide(n){
+			showSlides(index = n)
+		}
+
+		function showSlides(n) {
+  		var i;
+  		var x = document.getElementsByClassName("slideShow");
+  		var dots=document.getElementsByClassName("dot")
+  		if (n > x.length) {index = 1} 
+  		if (n < 1) {index = x.length} ;
+  		for (i = 0; i < x.length; i++) {
+    	x[i].style.display = "none"; 
+  		}
+
+  		for(i=0;i<dots.length;i++){
+  			dots[i].className=dots[i].className.replace(" active","")
+  		} 
+  		x[index-1].style.display = "block"; 
+		}
+		dots[index-1].className+="active";
+	</script>
+	<!-- Javascript for changing slide in every 3 second -->
+	<script>
+		var slides = 0;
+		show();
+		function show() {
+  		var i;
+  		var x = document.getElementsByClassName("slideShow");
+  		for (i = 0; i < x.length; i++) {
+    	x[i].style.display = "none"; 
+  		}
+  		slides++;
+  		if (slides > x.length) {slides = 1} 
+  		x[slides-1].style.display = "block"; 
+  		setTimeout(show, 3000);//Time millisecond
+		}
+	</script>
+	<!-- Javascript for typing text -->
+	<script>
+		var i = 0;
+		var txt = "Hello, my name is Pawan Chaudhary. I'm a student at Islington College and This is my portfolio website for our 4th coursework.";
+		var speed = 50;
+		function typer() {
+  			if (i < txt.length) {
+    			document.getElementById("intro").innerHTML += txt.charAt(i);
+    			i++;
+    			setTimeout(typer, speed);
+  			}
+		}
+		typer();
+	</script>
+</body>
+</html>

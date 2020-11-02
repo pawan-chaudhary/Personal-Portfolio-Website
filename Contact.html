@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio Website</title><!-- This is the title of website -->
+	<meta charset="utf-8"><!-- Unicode transformation format which contains universal character. it is the freatur of html-5 -->
+	<meta name="description" content="This web page contains a form which helps you to connect with author and there is also social media links from which you can follow author in different social media.">
+  	<meta name="keywords" content="HTML,CSS,JavaScript">
+  	<meta name="author" content="Pawan Chaudhary">
+	<link rel="icon" href="icon.png"><!-- Providing icon to the website in title -->
+	<link rel="stylesheet" href="index1.css"><!-- Using external CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><!-- Using a link provided by website to import icon by using this link. -->
+	<style>
+		/*Styling body of a webpage*/
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: verdana;
+			background-image: url(contact.jpg);
+		}
+		/*styling h1 tag of this web page*/
+		h1{
+			margin-top: 110px;
+			text-align: center;
+			font-size: 40px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		/*styling form of this webpage*/
+		form{
+			text-align: center;
+			margin-top: 30px;
+
+		}
+		/*styling for class of inputs*/
+		.form_text{
+			width: 400px;
+			background: #0009;
+			border: none;
+			border-bottom: 1px solid grey;
+			color: #fff;
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+		/*providing font size to input tag*/
+		input{
+			height: 45px;
+		}
+		/*styling class of submit button*/
+		.submit{
+			background: #ff5722;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			height: 40px;
+			border: none;
+		}
+		/*styling footer from its class*/
+		.Footer_Box{
+			margin-top: 20px;
+			overflow: auto;
+			background-color: #80bfff;
+			position: relative;
+			height: 100px;
+			clear: both;		
+		}
+		/*styling unordered list*/
+		.Footer_Box ul{
+			display: flex;
+			top: 30%;
+			left: 86%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			
+		}
+		/*styling for list of footer*/
+		.Footer_Box ul li{
+			list-style: none;
+			transition: 0.8s all;
+		}
+		/*styling for list item on hover*/
+		.Footer_Box ul li:hover{
+			background: #1a8cff;
+			border-radius: 35%;
+
+		}
+		/*styling for anchor of footer*/
+		.Footer_Box ul li a{
+			width: 70px;
+			height: 70px;
+			background: #ffd9b3;
+			text-align: center;
+			line-height: 71px;
+			font-size: 30px;
+			display: block;
+			border-radius: 50%;
+			margin: 0 25px;
+			position: relative;
+			overflow: hidden;
+			border-radius: 35px;
+		}
+		/*styling for label tag of footer*/
+		.Footer_Box label{
+			display: flex;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			font-size: 30px;
+			top: 50%;
+			left: 65%;
+		}
+		/*styling for p tag of footer*/ 	
+		.Footer_Box p{
+			position: absolute;
+			top: 20%;
+			left: 5%;
+		}	
+	</style>	
+</head>
+<body>
+	<!-- class for navigation bar -->
+	<div class="Navigation_Bar">
+		<nav>
+			<img src="logo.png" width="180" height="100" alt="No Preview">
+			<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="Blogs.html">Blogs</a></li>
+			<li><a href="About_me.html">About Me</a></li>
+			<li><a href="Research.html">Research</a></li>
+			<li><a class="current" href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+		<h1>Contact</h1>
+		<!-- class for contact form -->
+		<div class="Contact_Box">
+			<form id="Contact" name="check"  onsubmit="validation()">
+				<input type="text"  name="name"  class="form_text" placeholder="Name"><br>
+				<input type="text"  name="email" class="form_text" placeholder="Email"><br>
+				<textarea type="text" name="message" class="form_text" rows="12" placeholder="Write a message"></textarea><br>
+				<button class="submit">Send Message</button>
+			</form>
+		</div>
+		<!-- Class for footer  -->
+		<div class="Footer_Box">
+			<footer>
+					<p>Poftfolio Website &copy;2019. All right reserved. Developed by Pawan Chaudhary.</p>
+					<label style="color: #990000;">Follow me on:</label> <!-- using inline css for text color in label of footer -->
+					<ul>
+					<li><a href="https://www.facebook.com/" target="_Blank"><i class="fab fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/" target="_Blank"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://twitter.com/?lang=en" target="_Blank"><i class="fab fa-twitter"></i></a></li>
+				</ul>
+			</footer>			
+		</div>
+		<!-- Javascript for the validation of form -->
+	<script>
+		function validation(){
+			var x = document.forms["check"]["name"].value;
+			var y = document.forms["check"]["email"].value;
+			var z = document.forms["check"]["message"].value;
+			if (x == "" || y == "" || z == ""){
+					alert("Please, Dont leave fields empty!!!");
+				}
+				else {
+					alert("Message has been sent.");
+				}	
+		}
+	</script>
+</body>
+</html>

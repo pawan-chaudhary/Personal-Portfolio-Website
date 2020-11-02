@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio Website</title><!-- This is the title of website -->
+	<meta charset="utf-8"><!-- Unicode transformation format which contains universal character. it is the freatur of html-5 -->
+	<meta name="description" content="This web page contains the Resume of author. you can take reference from this web page.">
+  	<meta name="keywords" content="HTML,CSS,JavaScript">
+  	<meta name="author" content="Pawan Chaudhary">
+	<link rel="icon" href="icon.png"><!-- Providing icon to the website in title -->
+	<link rel="stylesheet" href="index1.css"><!-- Using external CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><!-- Using a link provided by website to import icon by using this link. -->
+	<style>
+		/*Styling body of a webpage*/
+		body{
+			margin: auto;
+			padding: 0;
+			font-family: verdana;
+		}
+		.info2 table, th, td{
+			border:2px solid black;
+		}
+		/*styling left part of cv page*/
+		#left-sec{
+			position: absolute;
+			top: 80px;
+			height: 748px;
+			width: 420px;
+			background-color: #99b3ff;
+		}
+		/*styling img tag used in left part*/
+		#left-sec img{
+			position:relative;
+			top: 100px;
+			left: 80px;
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			text-align: center;
+		}
+		/*styling id of left part*/
+		#left-sec .basic {
+			position: relative;
+			top: 130px;
+			left: 5px;
+
+		}
+		/*styling id of right part*/
+		#right-sec{
+			position: relative;
+			left:29%;
+			background-color: #ccddff;
+			top:80px;
+			height: 748px;
+			width: 1021px;
+		}
+		/*styling id of class in right part*/
+		#right-sec .info1{
+			border-style: solid;
+			text-align: center;
+
+		}
+		/*styling h2 tag used in class info1 of right part*/
+		#right-sec .info1 h2{
+			margin-top: 0px;
+			background-color: #9999e6
+		}
+		/*styling p tag used in class info1 of right part*/
+		#right-sec .info1 p{
+			position: relative;
+			font-size: 20px;
+			text-align: left;
+			left: 10px;
+		}
+		/*styling  class info2 of right part*/
+		#right-sec .info2{
+			border-style: solid;
+			text-align: center;
+
+		}
+		/*styling h2 used in class info2 of right part*/
+		#right-sec .info2 h2{
+			margin-top: 0px;
+			background-color: #9999e6
+		}
+		/*styling table used in info2 of right section*/
+		#right-sec .info2 table{
+			font-size: 20px;
+			text-align: center;
+			border-collapse: collapse;
+			width: 100%;
+			margin-bottom: 10px
+		}
+		/*styling skill portion of right section*/
+		#right-sec .info3{
+			border-style: solid;
+			text-align: center;
+
+			}
+		/*styling h2 tag of skill of right section */
+		#right-sec .info3 h2{
+			margin-top: 0px;
+			background-color: #9999e6
+		}
+		/*styling p tag of skill of right section*/
+		#right-sec .info3 p{
+			position: relative;
+			font-size: 20px;
+			text-align: left;
+			left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- creating class for navigation bar -->
+	<div class="Navigation_Bar">
+		<nav style="position: absolute;">
+			<img src="logo.png" width="180" height="100" alt="No Preview">
+			<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="Blogs.html">Blogs</a></li>
+			<li><a class="current" href="About_me.html">About Me</a></li>
+			<li><a href="Research.html">Research</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- creating id for left section -->
+	<div id="left-sec">
+		<img src="me.png" alt="No Preview">
+	<!-- creating class for basic information -->
+	<div class="basic">
+		<h1>Pawan Chaudhary</h1>
+		<p><i class="fas fa-envelope-square"></i><a href="https://mail.google.com/" target="_Blank"> NP01CP4A180092@islingtoncollege.edu.np</a></p>
+		<p><i class="fas fa-phone-volume"></i>+977-9822508910</p>
+		<p><a href="cv.pdf.zip">Download Resume</a></p>
+	</div>
+	</div>
+	<!-- creating id for right section -->
+	<div id="right-sec">
+		<!-- creating class for personal detail -->
+		<div class="info1">
+		<h2><i class="fas fa-user-lock"></i>Personal Detail</h2>
+			<p>Date of Birth: 19/10/1999<br>
+				Permanent Address: Surkhet<br>
+				Father's Name: xxxxxxxx xxxxxxx<br>
+				Mother's Name: xxxxxxxxx xxxxxxxxx<br>
+				Nationality: Nepalese<br>
+				Religion: Hindu<br>
+				Gender: Male<br>
+				Marital Status: Single<br>
+				Language: Nepali, English<br>
+				Temporary Residence: Lokanthali, Bhaktapur
+			</p>
+		</div>
+		<!-- creating class for educatin section of this web page -->
+		<div class="info2">
+			<h2><i class="fas fa-university"></i>Education</h2>	
+
+			<table>
+				<tr>
+					<th>S.N</th>
+					<th>Institute</th>
+					<th>GPA</th>
+					<th>Passed Year</th>
+				</tr>
+				<tr style="text-align: left;">
+					<td>1</td>
+					<td>Adarsh Raj H.S.B School</td>
+					<td>x</td>
+					<td>2072</td>
+					
+				</tr>
+				<tr style="text-align: left;">
+					<td>2</td>
+					<td>Nobel Academy H.S School</td>
+					<td>x</td>
+					<td>2074</td>
+				</tr>
+				<tr style="text-align: left;">
+					<td>3</td>
+					<td>Islington College</td>
+					<td> - </td>
+					<td>Present</td>
+				</tr>
+			</table>
+		</div>
+		<!-- creating class for skills section -->
+		<div class="info3">
+			<h2><i class="fas fa-address-card"></i>Skills</h2>
+			<p>Basic Python<br>Basic Java<br>Basic MYSQL<br>Basic HTML, CSS and Javascript
+			</p>
+		</div>
+	</div>		
+</body>
+</html>

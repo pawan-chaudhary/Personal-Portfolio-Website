@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pc</title>
+</head>
+<body>
+<!-- 	<script>
+	var name = prompt("Enter ut name");
+	document.write("hi"+name);
+</script> -->
+<form name="check" onsubmit="pawan()">
+	first name:<br>
+	<input type="text" name="fname"><br>
+	lastname: <br>
+	<input type="text" name="lname">
+	<br>
+	<input type="submit" value="Send">
+</form>
+<script>
+	function pawan(){
+var x= document.forms["check"]["fname"].value;
+if (x==""){
+	alert("plz");
+}
+else{
+	alert("sliz");
+}
+}
+</script>
+
+</body>
+</html>
